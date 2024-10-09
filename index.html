@@ -390,47 +390,47 @@
                         <div class="flex justify-between border-b-4 border-dashed pb-4">
                             <!-- Number of selected seats -->
                             <h1 class="text-xl font-semibold">Seat <span
-                                    class="bg-[#1DD100] px-2 text-center rounded-full text-white"> 0</span></h1>
+                                    class="bg-[#1DD100] px-2 text-center rounded-full text-white" id="selected-number-of-seat"> 0</span></h1>
                             <h1 class="text-xl font-semibold">Class</h1>
                             <h1 class="text-xl font-semibold">Price</h1>
                         </div>
                         <!--  -->
                         <div class="flex justify-between border-b-4 my-4 py-2">
                             <div>
-                                <ul class="text-xl font-semibold text-[#03071299]">
-                                    <li>C2</li>
-                                    <li>C3</li>
+                                <ul class="text-xl font-semibold text-[#03071299]" id="seat">
+                                    <!-- <li id="">null</li> -->
+                                    <!-- <li id="seat-2">null</li> -->
                                 </ul>
                             </div>
 
-                            <div>
-                                <h1 class="text-xl font-semibold text-[#03071299]">Economy</h1>
-                                <h1 class="text-xl font-semibold text-[#03071299]">Economy</h1>
+                            <div id="class">
+                                <!-- <h1 class="text-xl font-semibold text-[#03071299]">Economy</h1> -->
+                                <!-- <h1 class="text-xl font-semibold text-[#03071299]">Economy</h1> -->
                             </div>
 
-                            <div>
-                                <h1 class="text-xl font-semibold text-[#03071299]">550</h1>
-                                <h1 class="text-xl font-semibold text-[#03071299]">550</h1>
+                            <div id="price">
+                                <!-- <h1 class="text-xl font-semibold text-[#03071299]">00</h1> -->
+                                <!-- <h1 class="text-xl font-semibold text-[#03071299]">00</h1> -->
                             </div>
                         </div>
 
                         <div class="flex justify-between">
                             <h1 class="text-2xl font-bold">Total Price</h1>
-                            <h1 class="text-2xl font-bold">1100</h1>
+                            <h1 class="text-2xl font-bold" id="total-price">00</h1>
                         </div>
 
 
                         <div class="flex mt-4 relative">
-                            <input type="text" placeholder="Have any coupon?"
+                            <input disabled id="input-coupon" type="text" placeholder="Have any coupon?"
                                 class="input input-bordered input-lg w-full  bg-[#FFFFFF] text-sm font-semibold" />
 
-                            <button
+                            <button onclick="checkForValidation('input-coupon')" disabled id="coupon-btn"
                                 class="btn bg-[#1DD100] text-white text-md text-center font-semibold absolute left-[195px] rounded-xl mt-2">Apply</button>
                         </div>
 
                         <div class="flex justify-between mt-4">
                             <h1 class="text-2xl font-bold">Grand Price</h1>
-                            <h1 class="text-2xl font-bold">1100</h1>
+                            <h1 class="text-2xl font-bold" id="grand-price">00</h1>
                         </div>
 
 
@@ -444,7 +444,7 @@
                                 <span class="label-text text-[#030712] text-2xl font-semibold ">Passenger Name*</span>
 
                             </div>
-                            <input type="text" placeholder="Enter your name"
+                            <input id="name" type="text" placeholder="Enter your name"
                                 class="input input-bordered w-full max-w-xs" />
                         </label>
 
@@ -453,7 +453,7 @@
                                 <span class="label-text text-[#030712] text-2xl font-semibold ">Passenger Number*</span>
 
                             </div>
-                            <input type="text" placeholder="Enter your phone number"
+                            <input id="number" type="phone" placeholder="Enter your phone number"
                                 class="input input-bordered w-full max-w-xs" />
                         </label>
 
@@ -463,11 +463,11 @@
                                     ID*</span>
 
                             </div>
-                            <input type="email" placeholder="Enter your Email ID"
+                            <input id="email" type="email" placeholder="Enter your Email ID"
                                 class="input input-bordered w-full max-w-xs" />
                         </label>
 
-                        <button class="btn w-full mt-4 bg-[#1DD100] text-white text-2xl font-bold">Next</button>
+                        <button id="next-btn" disabled class="btn w-full mt-4 bg-[#1DD100] text-white text-2xl font-bold ">Next</button>
 
 
                     </section>
